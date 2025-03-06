@@ -19,13 +19,13 @@ DROP TABLE IF EXISTS northwind.territories;
 CREATE TABLE northwind.categories (
     category_id int NOT NULL, 
     category_name varchar(15) NOT NULL,
-    description varchar(65535),  Redshift does not support text, using varchar with max length
-    picture varbyte  Redshift does not support bytea, using varbyte
+    description varchar(65535),  -- Redshift does not support text, using varchar with max length
+    picture varbyte  -- Redshift does not support bytea, using varbyte
 );
 
 
 -- Create the customer_customer_demo table in the northwind schema
-CREATE TABLE northwind.customer_customer_demo (  Renamed CustomerCustomerDemo to customer_customer_demo to follow Redshift naming conventions
+CREATE TABLE northwind.customer_customer_demo (  -- Renamed CustomerCustomerDemo to customer_customer_demo to follow Redshift naming conventions
     customer_id varchar(5) NOT NULL,
     customer_type_id varchar(5) NOT NULL
 );
@@ -34,7 +34,7 @@ CREATE TABLE northwind.customer_customer_demo (  Renamed CustomerCustomerDemo to
 -- Create the customer_demographics table in the northwind schema
 CREATE TABLE northwind.customer_demographics ( 
     customer_type_id varchar(5) NOT NULL,
-    customer_desc varchar(65535)  Redshift does not support text, using varchar with max length
+    customer_desc varchar(65535)  -- Redshift does not support text, using varchar with max length
 );
 
 -- Create the customers table in the northwind schema
@@ -74,8 +74,8 @@ CREATE TABLE northwind.employees (
     country varchar(15),
     home_phone varchar(24),
     extension varchar(4),
-    photo varbyte,  Redshift does not support bytea, using varbyte
-    notes varchar(65535),  Redshift does not support text, using varchar with max length
+    photo varbyte,  -- Redshift does not support bytea, using varbyte
+    notes varchar(65535),  -- Redshift does not support text, using varchar with max length
     reports_to smallint,
     photo_path varchar(255)
 );
@@ -118,7 +118,7 @@ CREATE TABLE northwind.products (
     units_in_stock smallint,
     units_on_order smallint,
     reorder_level smallint,
-    discontinued boolean  Redshift does not support bit, using boolean
+    discontinued boolean  -- Redshift does not support bit, using boolean
 );
 
 -- Create the region table in the northwind schema
@@ -147,7 +147,7 @@ CREATE TABLE northwind.suppliers (
     country varchar(15),
     phone varchar(24),
     fax varchar(24),
-    homepage varchar(65535)  Redshift does not support text, using varchar with max length
+    homepage varchar(65535)  -- Redshift does not support text, using varchar with max length
 );
 
 -- Create the territories table in the northwind schema
