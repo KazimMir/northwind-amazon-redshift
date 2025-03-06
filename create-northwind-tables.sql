@@ -84,9 +84,9 @@ CREATE TABLE northwind.employees (
 CREATE TABLE northwind.order_details (
     order_id smallint NOT NULL,
     product_id smallint NOT NULL,
-    unit_price real NOT NULL,
+    unit_price decimal(12,2) NOT NULL,
     quantity smallint NOT NULL,
-    discount real NOT NULL
+    discount decimal(12,2) NOT NULL
 );
 
 -- Create the orders table in the northwind schema
@@ -98,7 +98,7 @@ CREATE TABLE northwind.orders (
     required_date date,
     shipped_date date,
     ship_via smallint,
-    freight real,
+    freight decimal(12,2),
     ship_name varchar(40),
     ship_address varchar(60),
     ship_city varchar(15),
@@ -114,7 +114,7 @@ CREATE TABLE northwind.products (
     supplier_id smallint,
     category_id smallint,
     quantity_per_unit varchar(20),
-    unit_price real,
+    unit_price decimal(12,2),
     units_in_stock smallint,
     units_on_order smallint,
     reorder_level smallint,
